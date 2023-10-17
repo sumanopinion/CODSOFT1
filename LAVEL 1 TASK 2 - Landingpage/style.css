@@ -1,0 +1,218 @@
+/* ============= GOOGLE FONTS (POPPINS & ROBOTO) ============ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: all 0.4s;
+}
+body{
+    font-family: sans-serif;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+  
+/* navbar styling */
+.navbar{
+    display: flex;
+    height: 5rem;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-bottom: 2px solid rgb(37, 217, 10);
+}
+  
+/* logo style  */
+.logo img{
+    width: 4rem;
+    height: 4rem;
+    margin-left:1rem;
+}
+  
+.hamburger-menu{
+    padding-right: 1.5rem;
+    cursor: pointer;
+}
+  
+.hamburger-menu .line{
+   display: block;
+   width:2.5rem;
+   height: 2px;
+   margin-bottom: 10px;
+   background-color: black;
+   cursor: pointer;
+}
+  
+.nav-menu{
+    position: fixed;
+    width: 94%;
+    top: 6rem;
+    left: 18px;
+    background-color:rgb(204, 160, 204);
+    font-weight: 600;
+  
+}
+.nav-menu a{
+    display: block;
+    text-align: center;
+    padding: 5px 0;
+}
+.nav-menu a:hover{
+    background-color: rgb(167, 106, 156);
+}
+  
+.hide{
+    display: none;
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/backgrouond.jpg');
+    background-size: cover;
+    z-index: -2;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: repeating-linear-gradient(306deg, indigo, red, #007bff, teal);
+    z-index: -1;
+    background-size: 400% 400%;
+    opacity: 0.5;
+    animation: Gradient 10s ease infinite;
+}
+
+@keyframes Gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    to {
+        background-position: 0% 50%;
+    }
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 20px;
+}
+
+.logo a img {
+    width: 50%;
+}
+
+.menu-items {
+    display: flex;
+    gap: 40px;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.menu-items a {
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.5s;
+}
+
+.menu-items a:hover {
+    color: #eea47f;
+}
+
+.center-text {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    padding-inline: 200px;
+    margin-top: 60px;
+}
+
+.center-text h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 5rem;
+    line-height: 1;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.center-text h2 {
+    font-size: 2rem;
+    font-weight: normal;
+    color: #fff;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.center-text p {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.center-text a {
+    display: inline-block;
+    color: #fff;
+    background-color: #eea47f;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 400;
+    border-radius: 6px;
+    text-align: center;
+    text-shadow: 0px 2px 2px rgb(0 0 0 / 10%);
+}
+
+@media screen and (min-width:600px){
+    .navbar{
+        justify-content: space-around;
+    }
+    .nav-menu{
+        display: block;
+        position: static;
+        width: auto;
+        margin-right:20px;
+        background: none;
+    }
+    .nav-menu a{
+        display: inline-block;
+        padding: 15px 20px;
+    }
+    .nav-menu a:hover{
+        background-color: rgb(223, 251, 219);
+        border-radius: 5px;
+    }
+    .hamburger-menu{
+        display: none;
+    }
+}
+
+@media (width < 480px){
+    .center-text {
+        text-align: center;
+        padding: 20px;
+        margin-top: 60px;
+    }
+
+    .center-text h1{
+    font-size: 3rem;
+    line-height: 1;
+
+    }
+}
